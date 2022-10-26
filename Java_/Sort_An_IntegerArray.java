@@ -1,65 +1,62 @@
-public class SortAsc {    
+// Java Program to Sort Elements of an Array
 
-    public static void main(String[] args) {        
 
-            
+class SortArray {
 
-        //Initialize array     
+	
+	static int length;
 
-        int [] arr = new int [] {5, 2, 8, 7, 1};     
+	
+	
+	public static void printArray(int[] array)
+	{
+	
+		for (int i = 0; i < length; i++) {
+			System.out.print(array[i] + " ");
+		}
+		System.out.println();
+	}
 
-        int temp = 0;    
+	
+	
+	public static void sortArray(int[] array)
+	{
+		int temporary = 0;
 
-            
+		
+	
+		for (int i = 0; i < length; i++) {
+			for (int j = i + 1; j < length; j++) {
+				if (array[i] > array[j]) {
+					temporary = array[i];
+					array[i] = array[j];
+					array[j] = temporary;
+				}
+			}
+		}
 
-        //Displaying elements of original array    
+		// Displaying elements of array after sorting
+		System.out.println(
+			"Elements of array sorted in ascending order: ");
+		printArray(array);
+	}
 
-        System.out.println("Elements of original array: ");    
 
-        for (int i = 0; i < arr.length; i++) {     
+	public static void main(String[] args)
+	{
+	
+		
+		int[] array = new int[] { -5, -9, 8, 12, 1, 3 };
 
-            System.out.print(arr[i] + " ");    
+	
+		length = array.length;
 
-        }    
+	
+		System.out.print("Elements of original array: ");
 
-            
+		
+		printArray(array);
 
-        //Sort the array in ascending order    
-
-        for (int i = 0; i < arr.length; i++) {     
-
-            for (int j = i+1; j < arr.length; j++) {     
-
-               if(arr[i] > arr[j]) {    
-
-                   temp = arr[i];    
-
-                   arr[i] = arr[j];    
-
-                   arr[j] = temp;    
-
-               }     
-
-            }     
-
-        }    
-
-          
-
-        System.out.println();    
-
-            
-
-        //Displaying elements of array after sorting    
-
-        System.out.println("Elements of array sorted in ascending order: ");    
-
-        for (int i = 0; i < arr.length; i++) {     
-
-            System.out.print(arr[i] + " ");    
-
-        }    
-
-    }    
-
-}    
+		sortArray(array);
+	}
+}
