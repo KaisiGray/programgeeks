@@ -1,6 +1,10 @@
 import java.util.Scanner;  
 
+
 public class TableExample  
+
+public class Table 
+
 
 {  
 
@@ -30,4 +34,7 @@ System.out.println(num+" * "+i+" = "+num*i);
 
 }  
 
+
 }  
+
+
