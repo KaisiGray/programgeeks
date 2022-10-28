@@ -1,12 +1,9 @@
 i = int(input("Enter the size of list : "))
 
-# padding for i squared
-l = len(str(i**2)) + 2
-# padding for i
-w = len(str(i)) + 2
+# Multiplication table (from 1 to 10) in Python
 
-header = " " * w + " " + "".join([str(j).rjust(l) for j in range(1, i + 1)])
-dashes = " " * w + ":" + "-" * l * i
-body = "\n".join([str(j).rjust(w) + ":" + "".join([str(j * k).rjust(l) for k in range(1, i+1)]) for j in range(1, i + 1)])
+num = int(input("Display multiplication table of? "))
 
-print("\n".join([header, dashes, body]))
+# Iterate 10 times from i = 1 to 10
+for i in range(1, 11):
+   print(num, 'x', i, '=', num*i)
