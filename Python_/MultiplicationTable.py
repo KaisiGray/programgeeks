@@ -1,5 +1,3 @@
-i = int(input("Enter the size of list : "))
-
 # Multiplication table (from 1 to 10) in Python
 
 num = int(input("Display multiplication table of? "))
