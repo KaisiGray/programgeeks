@@ -34,20 +34,18 @@ public class ReverseIntegerArray {
         for (int i = 0; i < stringNums.length; i++)
           nums[i] = Integer.parseInt(stringNums[i]);
 
-
         //Reverses the values inputted
         reverseIntArray(nums);
 
         //Prints the reverse results
         for (int i = 0; i < nums.length; i++)
-          System.out.println(nums[i]);
+          System.out.print(nums[i] + " ");
 
         break;
       }
       catch (NumberFormatException e) {
         System.out.println("You have inputted a value that is not a number, please try again");
       }
-
     }
   }
 }
